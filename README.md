@@ -1,2 +1,2 @@
 # gfetcher
-I Fetch.
+A GAE app.
