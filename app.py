@@ -15,6 +15,11 @@ class TestHandler(RequestHandler):
         info(self.request.path_info)
         self.response.headers['Content-Type'] = 'text/plain'
         self.response.write(self.request)
+        mail.send_mail(sender='admin@adeorz.appspotmail.com',
+                       #to='adereg@163.com',
+                       to='a@txtlxt.appspotmail.com',
+                       subject='fetch',
+                       body='hehe')
     post = get
 
 class ReceiveMailHandler(InboundMailHandler):
