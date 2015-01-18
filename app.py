@@ -15,6 +15,7 @@ class TestHandler(RequestHandler):
         info(self.request)
         info(self.request.path_info)
         self.response.headers['Content-Type'] = 'text/plain'
+        self.response.write('\n\n\n\n')
         self.response.write(self.request)
         from google.appengine.api import mail
         mail.send_mail(sender='admin@adeorz.appspotmail.com',
