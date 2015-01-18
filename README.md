@@ -1,2 +1,0 @@
-# gfetcher
-A GAE app.
