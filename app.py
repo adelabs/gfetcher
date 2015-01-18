@@ -12,9 +12,11 @@ class DefaultHandler(RequestHandler):
 
 class TestHandler(RequestHandler):
     def get(self):
+        info(self.request)
         info(self.request.path_info)
         self.response.headers['Content-Type'] = 'text/plain'
         self.response.write(self.request)
+        from google.appengine.api import mail
         mail.send_mail(sender='admin@adeorz.appspotmail.com',
                        #to='adereg@163.com',
                        to='a@txtlxt.appspotmail.com',
